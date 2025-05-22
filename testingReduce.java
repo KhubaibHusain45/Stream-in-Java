@@ -18,5 +18,8 @@ public class reduce {
 
        int newSum=num.stream().reduce(0, (x, y) -> x+y);
         System.out.println("New sum is: "+newSum);
+        
+        int max = num.stream().reduce(Integer.MIN_VALUE, (a, b) -> a > b ? a : b);
+        System.out.println("Max is: " + max);
     }
 }
